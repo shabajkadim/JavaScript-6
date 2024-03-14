@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Login-page</h1>
+        <form onsubmit="Login(event)">
+            <label>Email</label><br/>
+            <input type="email" id="email" /><br/>
+            <label>Password</label><br/>
+            <input type="password" id="password" /><br/>
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+    <script>
+        function Login(event){
+            event.preventDefault()
+            const email=document.getElementById("email").value
+            const password=document.getElementById("password").value
+            console.log(email,password);
+
+            if(email && password){
+                const loginData=JSON.parse(localStorage.getItem("users"))
+
+            if(loginData){
+                for(var i=0; i<loginData.length; i++){
+                    if(loginData[i].email===email && loginData[i].password===password){
+                        localStorage.setItem("mydata",JSON.stringify(loginData[i]))
+                        document.getElementById("email").value=""
+                        document.getElementById("password").value=""
+                       return alert("login Successfull")
+                    }
+                }
+                return alert("email and passowrd not match")
+            }else{
+                alert("not exist")
+            }
+
+            }else{
+                alert("all feild are required")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>DL</h1>
+        <input type="number" id="age" placeholder="Ente your age" />
+        <button onclick="checkAge()" > check </button>
+        <p id="display"></p>
+    </div>
+</body>
+<script>
+    function checkAge(){
+        const age=document.getElementById("age").value
+        const pTag=document.getElementById("display")
+        
+        if(age == 18){
+            pTag.style.color="yellow"
+            pTag.innerText="allow for LL"
+            alert("allow for LL")
+        }else if(age > 18 && age < 80){
+            pTag.style.color="green"
+            pTag.innerText="allow for Dl"
+            alert("allow for Dl")
+        }else{
+            pTag.style.color="red"
+            pTag.innerText="not allow for DL"
+            alert("not allow for DL")
+        }
+       
+        document.getElementById("age").value=""
+    }
+</script>
+</html>

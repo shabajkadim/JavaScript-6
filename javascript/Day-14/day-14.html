@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Register-page</h1>
+    </div>
+</body>
+<script>
+    // To store data in localStorage :-lacalstorage.setItem("key","value")
+    // localStorage.setItem("name","shabaj")
+    // localStorage.setItem("player","virat")
+    // localStorage.setItem("player2","rohit")
+    // localStorage.setItem("list","[1,2,3,4,4,5,6,6,7,8,8]")
+
+
+    // To reyriewe any data in localStorage :-lacalStorage.getItom("key")
+    // const retriveData=localStorage.getItem("name")
+    // const listData=localStorage.getItem('list')
+    // console.log(listData ,'listData');
+    // console.log(retriveData, "retriveData");
+
+    //to delete spacifice data from localStorage use :-localStorage.removeItem(key,value)
+    // localStorage.removeItem("player2")
+    // localStorage.removeItem("name")
+
+
+
+    //to delete all data frome loacalstorage to use clear
+    // localStorage.clear()
+
+
+   //to convert vs code into json use JSON.stringify 
+    // const myname={name:"shabaj"}
+    // var jsondata=JSON.stringify(myname);
+    // console.log(jsondata);
+
+    // const listdata={list:"1,2,3,4,5"}
+    // var jsvalue=JSON.stringify(listdata)
+    // console.log(jsvalue)
+
+
+    // to convert json data to js code to user json.parse
+    // var jsdata=JSON.parse(jsondata)
+    // console.log(jsdata); 
+
+    // var value=JSON.parse(jsvalue)
+    // console.log(value);
+    
+
+    var myData={name:"shahabaj",email:"shabaj@123" , pasword:"1234"}
+    localStorage.setItem("data",JSON.stringify(myData))
+
+    const mydata2={name:"virat",email:'virat@12345',password:"Password123"}
+    localStorage.setItem("value",JSON.stringify(mydata2))
+
+    localStorage.removeItem(mydata2[name])
+</script>
+</html>
