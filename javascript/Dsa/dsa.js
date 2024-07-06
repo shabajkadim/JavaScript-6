@@ -122,7 +122,7 @@
 
 // function sortedArrey(arrey){
 //     let result=0;
-//     for(let i=0; i<arrey.leght; i++){
+//     for(let i=0; i<arrey.length; i++){
 //         result += i;
 //         console.log(result);
 //     }
